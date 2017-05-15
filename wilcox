@@ -1,0 +1,7 @@
+adatok = read.table('./study/Statisztika/adatok.txt', header=TRUE);
+
+rug = adatok[,1];
+kre = adatok[,5];
+
+wilcox.test(rug, kre);
+

@@ -1,0 +1,7 @@
+adatok = read.table('./study/Statisztika/adatok.txt', header=TRUE);
+
+for ( i in 1:131 ){
+    if ( (adatok[i, 3] != 1) & (adatok[i,3] != 2) ) {
+	adatok[i,3] = floor(runif(1, min=1, max=3));
+    }
+}

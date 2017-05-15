@@ -1,0 +1,6 @@
+adatok = read.table('./study/Statisztika/adatok.txt', header=TRUE);
+tbchi = table(adatok$rugalmassag, adatok$nem);
+
+chisq.test(tbchi);
+
+chisq.test(tbchi, simulate.p.value=T);
