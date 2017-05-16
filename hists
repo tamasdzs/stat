@@ -1,0 +1,13 @@
+adatok = read.table('./study/Statisztika/stat/adatok.txt');
+
+kogrug = adatok[,1];
+kogrug <- gsub(",", "", kogrug);
+kogrug <- as.numeric(kogrug);
+
+hist(kogrug,xlab="pontszám",ylab="gyakoriság",main="Kognitív Rugalmasság teszt eloszlása", border="blue", col="red");
+
+kre = adatok[,5];
+kre <- gsub(",", "", kre);
+kre <- as.numeric(kre);
+
+hist(kre,xlab="pontszám",ylab="gyakoriság",main="Kreativitás teszt eloszlása", border="green", col="pink");
